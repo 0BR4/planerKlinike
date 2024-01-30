@@ -1,4 +1,4 @@
-Forme su:
+Forme su: 
 FormLogin.cs - forma za login (postavlja ulogovanog doktora kao aktivnog doktora)
 FormPlanerKlinike.cs - glavna stranica, sadrzi planer koji sluzi za pregled i zakazivanje usluga
 FormSablonPregled.cs - sluzi za zakazivanje pregleda, poziva se iz i vraca se u "FormPlanerKlinike.cs"
