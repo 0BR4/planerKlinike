@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CA7FD4DA-829C-47D3-8F88-76161B7B9C04}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DiplomskiPlanerKlinike</RootNamespace>
+    <AssemblyName>DiplomskiPlanerKlinike</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Control.Draggable, Version=1.0.5049.269, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Control.Draggable.1.0.5049.269\lib\net35-Client\Control.Draggable.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Installer for Windows\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBConnect.cs" />
+    <Compile Include="FormListaDoktora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListaDoktora.Designer.cs">
+      <DependentUpon>FormListaDoktora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormListaPacijenata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListaPacijenata.Designer.cs">
+      <DependentUpon>FormListaPacijenata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPlanerKlinike.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPlanerKlinike.Designer.cs">
+      <DependentUpon>FormPlanerKlinike.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSablonKontrola.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSablonKontrola.Designer.cs">
+      <DependentUpon>FormSablonKontrola.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSablonLab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSablonLab.Designer.cs">
+      <DependentUpon>FormSablonLab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSablonOperacija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSablonOperacija.Designer.cs">
+      <DependentUpon>FormSablonOperacija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSablonPregled.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSablonPregled.Designer.cs">
+      <DependentUpon>FormSablonPregled.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSablonTerapija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSablonTerapija.Designer.cs">
+      <DependentUpon>FormSablonTerapija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStatistika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStatistika.Designer.cs">
+      <DependentUpon>FormStatistika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormListaDoktora.resx">
+      <DependentUpon>FormListaDoktora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListaPacijenata.resx">
+      <DependentUpon>FormListaPacijenata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.de.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.sr-Latn.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPlanerKlinike.de.resx">
+      <DependentUpon>FormPlanerKlinike.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPlanerKlinike.resx">
+      <DependentUpon>FormPlanerKlinike.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPlanerKlinike.sr-Latn.resx">
+      <DependentUpon>FormPlanerKlinike.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSablonKontrola.resx">
+      <DependentUpon>FormSablonKontrola.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSablonLab.resx">
+      <DependentUpon>FormSablonLab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSablonOperacija.resx">
+      <DependentUpon>FormSablonOperacija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSablonPregled.resx">
+      <DependentUpon>FormSablonPregled.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSablonTerapija.resx">
+      <DependentUpon>FormSablonTerapija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStatistika.resx">
+      <DependentUpon>FormStatistika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
